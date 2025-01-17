@@ -1,0 +1,26 @@
+[ {
+  "numele" : "Ion Popescu",
+  "postul" : "Programator",
+  "dataAngajarii" : "2020-05-10",
+  "salariul" : 7000.5
+}, {
+  "numele" : "Maria Ionescu",
+  "postul" : "Director",
+  "dataAngajarii" : "2024-04-15",
+  "salariul" : 2000.0
+}, {
+  "numele" : "Andrei Dumitrescu",
+  "postul" : "Manager",
+  "dataAngajarii" : "2018-07-20",
+  "salariul" : 1500.0
+}, {
+  "numele" : "Elena Vasilescu",
+  "postul" : "Tester",
+  "dataAngajarii" : "2022-02-05",
+  "salariul" : 3500.0
+}, {
+  "numele" : "Cristian Georgescu",
+  "postul" : "Analist",
+  "dataAngajarii" : "2019-11-11",
+  "salariul" : 5000.0
+} ]

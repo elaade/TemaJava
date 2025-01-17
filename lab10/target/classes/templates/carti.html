@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gestionează Cărțile</title>
+</head>
+<body>
+<h1>Lista cartilor</h1>
+<p th:text="${mesaj}">Lista cartilor preluate prin repository</p>
+<table border="1">
+    <tr>
+        <th>ISBN</th>
+        <th>Titlu</th>
+        <th>Autor</th>
+    </tr>
+    <tr th:each="carte : ${carti}">
+        <td th:text="${carte.isbn}"></td>
+        <td th:text="${carte.titlu}"></td>
+        <td th:text="${carte.autor}"></td>
+    </tr>
+</table>
+
+<h2>Adauga o carte</h2>
+<form th:action="@{/carti/adauga}" method="post">
+    <input type="text" name="isbn" placeholder="ISBN" required />
+    <input type="text" name="titlu" placeholder="Titlu" required />
+    <input type="text" name="autor" placeholder="Autor" required />
+    <button type="submit">Adauga</button>
+</form>
+
+<h2>Modifica o carte</h2>
+<form th:action="@{/carti/modifica}" method="post">
+    <input type="text" name="isbn" placeholder="ISBN" required />
+    <input type="text" name="titlu" placeholder="Titlu nou" />
+    <input type="text" name="autor" placeholder="Autor nou" />
+    <button type="submit">Modifica</button>
+</form>
+
+<h2>Sterge o carte</h2>
+<form th:action="@{/carti/sterge}" method="post">
+    <input type="text" name="isbn" placeholder="ISBN" required />
+    <button type="submit">Sterge</button>
+</form>
+
+<h2>Filtreaza dupa autor</h2>
+<form th:action="@{/carti}" method="get">
+    <input type="text" name="autor" placeholder="Autor" />
+    <button type="submit">Filtreaza</button>
+</form>
+</body>
+</html>
